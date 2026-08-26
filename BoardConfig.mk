@@ -13,6 +13,9 @@ include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 # Inherit from the proprietary version
 include vendor/xiaomi/unicorn/BoardConfigVendor.mk
 
+# MiuiCamera
+-include device/xiaomi/miuicamera-unicorn/BoardConfig.mk
+
 DEVICE_PATH := device/xiaomi/unicorn
 
 # Audio
