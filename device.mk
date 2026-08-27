@@ -15,6 +15,10 @@ $(call inherit-product, vendor/xiaomi/unicorn/unicorn-vendor.mk)
 $(call inherit-product-if-exists, device/xiaomi/miuicamera-unicorn/device.mk)
 $(call soong_config_set,camera,package_name,com.android.camera)
 
+# OS3 camera stack requires the unmangled SetTaskProfiles symbol
+PRODUCT_PACKAGES += \
+    libprocessgroup_shim
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/mixer_paths_waipio_mtp.xml \
