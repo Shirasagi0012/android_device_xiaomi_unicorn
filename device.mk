@@ -36,12 +36,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.default
 
-# SukiSU-Ultra (kernel root) manager and SUSFS tool
+# SukiSU-Ultra SUSFS userspace tool. Root itself is built into the kernel;
+# the manager app is NOT bundled — the kernel only crowns managers installed
+# under /data/app, so users install the official APK themselves.
 PRODUCT_PACKAGES += \
-    SukiSUUltra \
-    SukiSUUltra_jni_libkernelsu \
-    SukiSUUltra_jni_libadbroot \
-    SukiSUUltra_jni_libksud \
     ksu_susfs
 
 # Soong namespaces
