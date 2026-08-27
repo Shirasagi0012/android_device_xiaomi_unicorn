@@ -36,6 +36,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.default
 
+# SukiSU-Ultra (kernel root) manager and SUSFS tool
+PRODUCT_PACKAGES += \
+    SukiSUUltra \
+    ksu_susfs
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

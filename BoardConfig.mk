@@ -13,6 +13,13 @@ include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 # Inherit from the proprietary version
 include vendor/xiaomi/unicorn/BoardConfigVendor.mk
 
+# SukiSU-Ultra: pin the kernel driver version to the KernelSU submodule
+# (branch "builtin", commit 5a2bb7e5 = v4.1.3, version code 40889).
+# The in-kernel Makefile otherwise falls back to 13000 because the AOSP
+# build sandbox blocks its curl/git version probing.
+# Keep in sync when bumping the submodule.
+TARGET_KERNEL_ADDITIONAL_FLAGS += KSU_VERSION=40889
+
 # MiuiCamera
 -include device/xiaomi/miuicamera-unicorn/BoardConfig.mk
 
