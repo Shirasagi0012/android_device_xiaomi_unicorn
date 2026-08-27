@@ -39,6 +39,9 @@ PRODUCT_PACKAGES += \
 # SukiSU-Ultra (kernel root) manager and SUSFS tool
 PRODUCT_PACKAGES += \
     SukiSUUltra \
+    SukiSUUltra_jni_libkernelsu \
+    SukiSUUltra_jni_libadbroot \
+    SukiSUUltra_jni_libksud \
     ksu_susfs
 
 # Soong namespaces
